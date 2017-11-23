@@ -8,12 +8,13 @@ import View.ViewCadastraMusica;
 import View.ViewMenu;
 
 public class ControleMenu {
+	
 	private BD bds;
 	private ViewMenu vm;
 	private ControleCadastraMusica ccm;
 	private ControleCadastrarArtista cca;
 	
-		public ControleMenu() {
+		public ControleMenu(BD bds) {
 			this.bds = bds;
 			
 			this.vm = new ViewMenu();
@@ -21,10 +22,8 @@ public class ControleMenu {
 			this.ccm = new ControleCadastraMusica(bds);
 			
 			
-			
-	tratarMenu(this.vm.getMenu());		
-			
-		}
+			tratarMenu(this.vm.getMenu());		
+	}
 
 		private void tratarMenu(String menu) {
 			while (true) {
