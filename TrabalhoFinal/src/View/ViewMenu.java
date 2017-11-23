@@ -11,8 +11,10 @@ public class ViewMenu {
 				"Escolha uma upção" + "\n" + 
 		"1 - Cadastrar Artista"+ "\n"+
 						"2 - Cadastrar Musica"+ "\n"+
-		"3- Cadastrar Musica a Artista" + "\n" +
-						"4- Sair");
+		"3- Buscar Musica" + "\n" +
+		"4- Buscar Artista" + "\n" +
+		"5- Buscar Musica por Nomes" + "\n" +
+						"6- Sair");
 	return this.menu;
 	}
 }

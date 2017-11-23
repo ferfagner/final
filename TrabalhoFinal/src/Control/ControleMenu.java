@@ -13,6 +13,9 @@ public class ControleMenu {
 	private ViewMenu vm;
 	private ControleCadastraMusica ccm;
 	private ControleCadastrarArtista cca;
+	private ControleBuscaMusicaNome cbmn;
+	private ControleBuscarMusica cbm;
+	private ControleBuscarMusicaArtista cbma;
 	
 		public ControleMenu(BD bds) {
 			this.bds = bds;
@@ -20,7 +23,9 @@ public class ControleMenu {
 			this.vm = new ViewMenu();
 			this.cca = new ControleCadastrarArtista(bds);
 			this.ccm = new ControleCadastraMusica(bds);
-			
+			this.cbm = new ControleBuscarMusica();
+			this.cbma = new ControleBuscarMusicaArtista(bds);
+			this.cbm = new ControleBuscarMusica();
 			
 			tratarMenu(this.vm.getMenu());		
 	}
@@ -32,7 +37,13 @@ public class ControleMenu {
 				break;
 				case "2": this.ccm.cadastraMusica();
 				break;
-				case "4": JOptionPane.showMessageDialog(null, "Sair"); 
+				case "3": this.cbmn.musicaNome();
+				break;
+				case "4": this.cbma.exeibirNomeArtista();
+				break;
+				case "5": this.cbm.buscarPorLetra();
+				break;
+				case "6": JOptionPane.showMessageDialog(null, "Sair"); 
 				return;
 					
 				default: JOptionPane.showMessageDialog(null, "Opção Invalida");
