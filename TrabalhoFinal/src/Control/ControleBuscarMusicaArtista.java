@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import Model.BD;
 import Model.Musica;
 import View.ViewExibirMusica;
+import View.ViewSolicitaArtista;
 import View.ViewSolicitaMusica;
 
 public class ControleBuscarMusicaArtista {
@@ -16,20 +17,20 @@ public class ControleBuscarMusicaArtista {
 	public void exeibirNomeArtista(){
 		ArrayList<Musica> musicas = this.bds.getMusicas();
 		
-		ViewSolicitaMusica vsm = new ViewSolicitaMusica();
+		ViewSolicitaArtista vsa = new ViewSolicitaArtista();
 		
 		
-		String nomeMusica = vsm.getNomeMusica();
+		String nomeArtista = vsa.getNome();
 		
-		String nm = "---" + nomeMusica + "---\n";
+		String na = "---" + nomeArtista + "---\n";
 		for (int i = 0; i < musicas.size(); i++) {
-			if(musicas.get(i).getArtista().equals(nomeMusica)){
-				nm  += "-------------------\n" + 
+			if(musicas.get(i).getArtista().equals(nomeArtista)){
+				na  += "-------------------\n" + 
 						musicas.get(i).getNomeMusica() + "\n" + 
 						musicas.get(i).getGenero() + "\n" +
 						musicas.get(i).getArtista() + "\n";
 			}
 		}
-		ViewExibirMusica vem = new ViewExibirMusica(nm);
+		ViewExibirMusica vea = new ViewExibirMusica(na);
 	}
 }

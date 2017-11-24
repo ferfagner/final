@@ -49,7 +49,7 @@ public class BD {
 
 	public void gravarMusica (Musica m) {
 		this.musicas.add(m);
-		String musica = "\n" + m.getNomeMusica()+ ";" + m.getGenero();
+		String musica = m.getNomeMusica()+ ";" + m.getGenero() + ";" + m.getArtista();
 		DocumentWriter dw = new DocumentWriter();
 		
 		dw.write(this.filename, musica);
@@ -57,7 +57,7 @@ public class BD {
 	}
 	public void gravarArtista (Artista a) {
 		this.artistas.add(a);
-		String artista = "\n" + a.getNome()+ ";" + a.getIdade() ;
+		String artista = a.getNome()+ ";" + a.getIdade() ;
 		DocumentWriter dw = new DocumentWriter();
 	dw.write(this.filenemea, artista);
 	}

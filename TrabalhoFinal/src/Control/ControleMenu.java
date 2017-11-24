@@ -25,7 +25,7 @@ public class ControleMenu {
 			this.ccm = new ControleCadastraMusica(bds);
 			this.cbm = new ControleBuscarMusica();
 			this.cbma = new ControleBuscarMusicaArtista(bds);
-			this.cbm = new ControleBuscarMusica();
+			this.cbmn = new ControleBuscaMusicaNome(bds);
 			
 			tratarMenu(this.vm.getMenu());		
 	}
